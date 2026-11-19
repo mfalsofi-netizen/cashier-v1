@@ -1,0 +1,10 @@
+{
+  "name": "كاشير-V1",
+  "short_name": "كاشير-V1",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0652a5",
+  "theme_color": "#0652a5",
+  "dir": "rtl",
+  "lang": "ar"
+}
