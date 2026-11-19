@@ -1761,8 +1761,7 @@
     }
 
     function buildInvoiceWhatsAppText(order) {
-      const itemsLines = (order.items || []).map(it => `- ${it.name} (${it.qty} × ${fmtNum(it.price)}) = ${fmtNum(it.total)}`).join('
-');
+      const itemsLines = (order.items || []).map(it => `- ${it.name} (${it.qty} × ${fmtNum(it.price)}) = ${fmtNum(it.total)}`).join('\n');
       return [
         `*${state.settings.storeName || 'كاشير-V1'}*`,
         `رقم الفاتورة: ${order.orderNumber}`,
@@ -1775,8 +1774,7 @@
         `المدفوع: ${fmtNum(order.paid)} ${order.currency}`,
         `المتبقي: *${fmtNum(order.remaining)} ${order.currency}*`,
         state.settings.storeFooter || ''
-      ].filter(Boolean).join('
-');
+      ].filter(Boolean).join('\n');
     }
 
     function sendOrderWhatsApp(order) {
